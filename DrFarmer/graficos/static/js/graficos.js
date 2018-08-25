@@ -1,4 +1,4 @@
-window.onload = function(event){
+window.onload = function (event){
     Highcharts.theme = {
         colors: ['#00FF00', '#0000FF', '#FFFF00', '#7798BF', '#aaeeee', '#ff0066',
             '#eeaaee', '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
@@ -214,15 +214,23 @@ window.onload = function(event){
                     // set up the updating of the chart each second
                     var s = this.series[0];
                     var i = 0;
+                    // var bps = document.getElementById('bps').value;
+                    
+                    // var x = document.getElementById('eixoX').value;
+                    
                     setInterval(function () {
-                        var x = (new Date()).getTime(), y;// current time
-                        if (i <= 5) {
-                            y = 0;
-                        } else {
-                            y = Math.random() * 100;
-                            i = 0;
-                        }
-                        s.addPoint([x, y], true, true);
+                        var x = (new Date()).getTime();// current time
+                        var eixoY = parseFloat(document.getElementById('eixoY').value);
+
+                        y = eixoY;
+                        // if (i <= 5) {
+                        //     y = 0;
+                        // } else {
+                        //     y = eixoY;
+                        //     // y = Math.random() * 100;
+                        //     i = 0;
+                        // }
+                        s.addPoint([x, y], true, false);
                         i ++;
                     }, 1000);
                 }
@@ -264,11 +272,11 @@ window.onload = function(event){
             data: (function () {
                 // generate an array of random data
                 var data = [],
-                    time = (22),
+                    time = (new Date()).getTime(),
                     i;
 
-                for (i = -999; i <= 0; i += 1) {
-                    data.push([0]);
+                for (i = -15; i <= 0; i += 1) {
+                    data.push(0);
                 }
                 return data;
             }())
