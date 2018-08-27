@@ -1,4 +1,11 @@
-#number {
-    text-align: center;
-    background-color: red !important;
+.monitor {
+    width: 100%;
+    height: 90%;
+    background-color: black;
+}
+#numbers {
+    background-color: black;
+    font-size: 100px;
+    color: #00FF00;
+    border-left: 3px solid green;
 }
