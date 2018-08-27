@@ -9,15 +9,17 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/graficos/graficos.css">
 </head>
 <body>
-	<div class="monitor row no-gutters">
-		<div id="graphs" class="col-12 col-sm-6 col-md-9">
-			<div id="cardioGraph">
+	<div id="monitor">
+		<div id="cardio" class="row no-gutters">
+			<div id="cardioGraph" class="col-12 col-sm-6 col-md-10">
 				<div id="container">Este navegador não suporta o gráfico</div>
 			</div>
-		</div>
-		<div id="numbers" class="col-6 col-sm-2 col-md-3 d-flex">
-			<div id="cardioNumber">
+			<div id="cardioNumber" class="col-6 col-sm-2 col-md-2 d-flex align-items-center justify-content-center">
 				<div id="bps">{{valorEixoY}}</div>
+			</div>
+			<div id="teste" class="row no-gutters">
+				<div id="testeG" class="col-12 col-sm-6 col-md-10">
+				</div>
 			</div>
 		</div>
 	</div>

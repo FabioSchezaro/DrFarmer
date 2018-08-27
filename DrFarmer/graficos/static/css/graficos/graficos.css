@@ -1,10 +1,30 @@
-.monitor {
+#monitor {
     width: 100%;
     height: 90%;
     background-color: black;
 }
-#numbers {
-    background-color: black;
+
+#cardio {
+    border: 3px solid white;
+}
+#cardioNumber {
+    font-size: 100px;
+    color: #00FF00;
+    border-left: 3px solid green;
+}
+
+
+
+
+
+
+
+
+
+#teste {
+    border: 3px solid white;
+}
+#testeNumber {
     font-size: 100px;
     color: #00FF00;
     border-left: 3px solid green;
