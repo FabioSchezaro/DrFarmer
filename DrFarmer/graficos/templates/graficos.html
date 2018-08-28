@@ -4,9 +4,15 @@
 	<script src="https://code.highcharts.com/stock/highstock.js"></script>
 	<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
 	<script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+
+	<script src="../static/js/cardio/cardio.js"></script>
+	<script src="../static/js/oximetria/oximetria.js"></script>
 	<script src="../static/js/graficos/graficos.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/graficos/graficos.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/cardio/cardio.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/oximetria/oximetria.css">
+
 </head>
 <body>
 	<div id="monitor">
@@ -17,9 +23,13 @@
 			<div id="cardioNumber" class="col-6 col-sm-2 col-md-2 d-flex align-items-center justify-content-center">
 				<div id="bps">{{valorEixoY}}</div>
 			</div>
-			<div id="teste" class="row no-gutters">
-				<div id="testeG" class="col-12 col-sm-6 col-md-10">
-				</div>
+		</div>
+		<div id="oximetria" class="row no-gutters">
+			<div id="oximetriaGraph" class="col-12 col-sm-6 col-md-10">
+				<div id="container2">Este navegador não suporta o gráfico</div>
+			</div>
+			<div id="oximetriaNumber" class="col-6 col-sm-2 col-md-2 d-flex align-items-center justify-content-center">
+				<div id="bps2">{{valorEixoY}}</div>
 			</div>
 		</div>
 	</div>
