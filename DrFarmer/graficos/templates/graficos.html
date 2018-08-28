@@ -1,45 +1,67 @@
 <html>
-<head>
-	<title>Graficos</title>
-	<script src="https://code.highcharts.com/stock/highstock.js"></script>
-	<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-	<script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+	<head>
+		<title>Graficos</title>
+		<script src="https://code.highcharts.com/stock/highstock.js"></script>
+		<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
 
-	<script src="../static/js/cardio/cardio.js"></script>
-	<script src="../static/js/oximetria/oximetria.js"></script>
-	<script src="../static/js/graficos/graficos.js"></script>
+		<script src="jquery-3.3.1.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/cardio/cardio.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/oximetria/oximetria.css">
+		<script src="../static/js/cardio/cardio.js"></script>
+		<script src="../static/js/oximetria/oximetria.js"></script>
+		<script src="../static/js/graficos/graficos.js"></script>
 
-</head>
-<body>
-	<div id="monitor">
-		<div id="cardio" class="row no-gutters">
-			<div id="cardioGraph" class="col-12 col-sm-6 col-md-10">
-				<div id="container">Este navegador não suporta o gráfico</div>
-			</div>
-			<div id="cardioNumber" class="col-6 col-sm-2 col-md-2 d-flex align-items-center justify-content-center">
-				<div id="bps">{{valorEixoY}}</div>
-			</div>
-		</div>
-		<div id="oximetria" class="row no-gutters">
-			<div id="oximetriaGraph" class="col-12 col-sm-6 col-md-10">
-				<div id="container2">Este navegador não suporta o gráfico</div>
-			</div>
-			<div id="oximetriaNumber" class="col-6 col-sm-2 col-md-2 d-flex align-items-center justify-content-center">
-				<div id="bps2">{{valorEixoY}}</div>
-			</div>
-		</div>
-	</div>
-	<input type="hidden" id="eixoY" value="{{valorEixoY}}" />
-</body>
+		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/graficos/graficos.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/cardio/cardio.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/oximetria/oximetria.css">
+
+	</head>
+	<body>
+		<table class="table">
+			<tr id="cardio">
+				<td id="cardioGraph">
+					<div id="container">Este navegador não suporta o gráfico</div>
+				</td>
+				<td id="cardioNumber">
+					<div id="bps">{{valorEixoY}}</div>
+				</td>
+			</tr>
+			<tr id="oximetria">
+				<td id="oximetriaGraph">
+					<div id="container2">Este navegador não suporta o gráfico</div>
+				</td>
+				<td id="oximetriaNumber">
+					<div id="bps2">{{valorEixoY}}</div>
+				</td>
+				</tr>
+		</table>
+		<input type="hidden" id="eixoY" value="{{valorEixoY}}" />
+		<iframe
+			allow="microphone;"
+			width="100%"
+			height="5%"
+			src="https://console.dialogflow.com/api-client/demo/embedded/fschezaro">
+		</iframe>
+	</body>
 </html>
-<!-- <iframe
-		allow="microphone;"
-		width="100%"
-		height="9%"
-		src="https://console.dialogflow.com/api-client/demo/embedded/fschezaro">
-	</iframe> -->
-	<!--  -->
+<!--  -->
+
+	<!-- <div id="monitor">
+		<div  class="row no-gutters">
+			<div  class="col-12 col-sm-6 col-md-10">
+				
+			</div>
+			<div  class="col-6 col-sm-2 col-md-2 d-flex align-items-center justify-content-center">
+				
+			</div>
+		</div>
+		<div  class="row no-gutters">
+			<div  class="col-12 col-sm-6 col-md-10">
+				
+			</div>
+			<div  class="col-6 col-sm-2 col-md-2 d-flex align-items-center justify-content-center">
+
+			</div>
+		</div>
+	</div> -->

@@ -1,0 +1,11 @@
+.table {
+    width: 100%;
+    height: 95%;
+    background-color: black;
+}
+
+#cardioNumber, #oximetriaNumber {
+    font-size: 100px;
+    color: #00FF00;
+    border-left: 3px solid green;
+}

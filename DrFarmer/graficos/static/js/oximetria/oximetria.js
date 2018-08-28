@@ -27,7 +27,7 @@ function graphOximetria () {
                     }, 1000);
                 }
             },
-            height: 250
+            // height: 250
         },
 
         navigator: {

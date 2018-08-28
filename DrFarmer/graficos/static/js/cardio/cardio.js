@@ -27,7 +27,7 @@ function graphCardio () {
                     }, 1000);
                 }
             },
-            height: 250
+            // height: 800
         },
 
         navigator: {
