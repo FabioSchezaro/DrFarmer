@@ -18,50 +18,33 @@
 
 	</head>
 	<body>
-		<table class="table">
-			<tr id="cardio">
-				<td id="cardioGraph">
+		<div id="monitor">
+			<div id="cardio" class="row no-gutters">
+				<div id="cardioGraph" class="col-12 col-sm-6 col-md-10">
 					<div id="container">Este navegador não suporta o gráfico</div>
-				</td>
-				<td id="cardioNumber">
-					<div id="bps">{{valorEixoY}}</div>
-				</td>
-			</tr>
-			<tr id="oximetria">
-				<td id="oximetriaGraph">
+				</div>
+				<div id="cardioNumber" class="col-6 col-sm-2 col-md-2 d-flex align-items-center justify-content-center">
+					<div id="bps">{{pulsoCardio}}</div>
+				</div>
+			</div>
+			<div id="oximetria" class="row no-gutters">
+				<div id="oximetriaGraph" class="col-12 col-sm-6 col-md-10">
 					<div id="container2">Este navegador não suporta o gráfico</div>
-				</td>
-				<td id="oximetriaNumber">
-					<div id="bps2">{{valorEixoY}}</div>
-				</td>
-				</tr>
-		</table>
-		<input type="hidden" id="eixoY" value="{{valorEixoY}}" />
-		<iframe
+				</div>
+				<div id="oximetriaNumber" class="col-6 col-sm-2 col-md-2 d-flex align-items-center justify-content-center">
+					<div id="bps2">{{pulsoOximetria}}</div>
+				</div>
+			</div>
+		</div>
+		<input type="hidden" id="pulsoCardio" value="{{pulsoCardio}}" />
+		<input type="hidden" id="pulsoOximetria" value="{{pulsoOximetria}}" />
+	</body>
+</html>
+<!--  <iframe
 			allow="microphone;"
 			width="100%"
 			height="5%"
 			src="https://console.dialogflow.com/api-client/demo/embedded/fschezaro">
-		</iframe>
-	</body>
-</html>
-<!--  -->
+		</iframe>-->
 
-	<!-- <div id="monitor">
-		<div  class="row no-gutters">
-			<div  class="col-12 col-sm-6 col-md-10">
-				
-			</div>
-			<div  class="col-6 col-sm-2 col-md-2 d-flex align-items-center justify-content-center">
-				
-			</div>
-		</div>
-		<div  class="row no-gutters">
-			<div  class="col-12 col-sm-6 col-md-10">
-				
-			</div>
-			<div  class="col-6 col-sm-2 col-md-2 d-flex align-items-center justify-content-center">
-
-			</div>
-		</div>
-	</div> -->
+	<!--  -->

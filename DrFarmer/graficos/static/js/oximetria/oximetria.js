@@ -12,7 +12,7 @@ function graphOximetria () {
                     
                     setInterval(function () {
                         var x = (new Date()).getTime();// current time
-                        var eixoY = parseFloat(document.getElementById('eixoY').value);
+                        var eixoY = parseFloat(document.getElementById('pulsoOximetria').value);
 
                         y = eixoY;
                         // if (i <= 5) {
@@ -27,38 +27,38 @@ function graphOximetria () {
                     }, 1000);
                 }
             },
-            // height: 250
+            height: 250
         },
 
-        navigator: {
-            enabled: false
-        },
+        // navigator: {
+        //     // enabled: false,
+        //     range: 10
+        // },
 
         scrollbar: {
             enabled: false
         },
 
         rangeSelector: {
-            // buttons: [{
-            //     count: 1,
-            //     type: 'minute',
-            //     text: '1M'
-            // }, {
-            //     count: 5,
-            //     type: 'minute',
-            //     text: '5M'
-            // }, {
-            //     type: 'all',
-            //     text: 'All'
-            // }],
+            buttons: [{
+                count: 10,
+                type: 'second',
+                text: ''
+            }, {
+                count: 5,
+                type: 'second',
+                text: ''
+            }, {
+                type: 'all',
+                text: ''
+            }],
             inputEnabled: false,
-            enabled: false
-            
-            // selected: 0
+            enabled: false,
+            selected: 0
         },
 
         title: {
-            text: 'Cardio'
+            text: 'Oximetria'
         },
 
         exporting: {
@@ -70,8 +70,13 @@ function graphOximetria () {
             minorGridLineWidth: 0
         }],
 
+        
+        xAxis: {
+            range: 11 // six months
+        },
+        
         series: [{
-            name: 'Cardio',
+            name: 'Oximetria',
             data: (function () {
                 // generate an array of random data
                 var data = [],

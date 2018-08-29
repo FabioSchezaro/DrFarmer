@@ -12,7 +12,7 @@ function graphCardio () {
                     
                     setInterval(function () {
                         var x = (new Date()).getTime();// current time
-                        var eixoY = parseFloat(document.getElementById('eixoY').value);
+                        var eixoY = parseFloat(document.getElementById('pulsoCardio').value);
 
                         y = eixoY;
                         // if (i <= 5) {
@@ -27,34 +27,32 @@ function graphCardio () {
                     }, 1000);
                 }
             },
-            // height: 800
+            height: 250
         },
 
-        navigator: {
-            enabled: false
-        },
+        // navigator: {
+        //     enabled: false
+        // },
 
         scrollbar: {
             enabled: false
         },
 
         rangeSelector: {
-            // buttons: [{
-            //     count: 1,
-            //     type: 'minute',
-            //     text: '1M'
-            // }, {
-            //     count: 5,
-            //     type: 'minute',
-            //     text: '5M'
-            // }, {
-            //     type: 'all',
-            //     text: 'All'
-            // }],
+            buttons: [{
+                count: 10,
+                type: 'second',
+                text: ''
+            }, {
+                count: 5,
+                type: 'second',
+                text: ''
+            }, {
+                type: 'all',
+                text: ''
+            }],
             inputEnabled: false,
-            enabled: false
-            
-            // selected: 0
+            selected: 0
         },
 
         title: {
@@ -67,7 +65,7 @@ function graphCardio () {
 
         yAxis: [{
             gridLineWidth: 0,
-            minorGridLineWidth: 0
+            minorGridLineWidth: 0,
         }],
 
         series: [{

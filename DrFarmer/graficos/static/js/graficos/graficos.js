@@ -132,21 +132,21 @@ window.onload = function (event){
         // scroll charts
         rangeSelector: {
             buttonTheme: {
-                fill: '#505053',
+                fill: '#000000',
                 stroke: '#000000',
                 style: {
                     color: '#CCC'
                 },
                 states: {
                     hover: {
-                        fill: '#707073',
+                        fill: '#000000',
                         stroke: '#000000',
                         style: {
                             color: 'white'
                         }
                     },
                     select: {
-                        fill: '#000003',
+                        fill: '#000000',
                         stroke: '#000000',
                         style: {
                             color: 'white'
@@ -202,6 +202,9 @@ window.onload = function (event){
 
     Highcharts.setOptions(Highcharts.theme);
     Highcharts.setOptions({
+        lang:{
+            rangeSelectorZoom: ''
+        },
         global: {
             useUTC: false
         }
