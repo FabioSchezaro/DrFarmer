@@ -58,7 +58,10 @@ function graphOximetria () {
         },
 
         title: {
-            text: 'Oximetria'
+            text: 'Oximetria',
+            style: {
+                color: '#FF0000'
+            }
         },
 
         exporting: {
@@ -70,11 +73,12 @@ function graphOximetria () {
             minorGridLineWidth: 0
         }],
 
-        
-        xAxis: {
-            range: 11 // six months
+        plotOptions: {
+            series: {
+                color: '#FF0000'
+            }
         },
-        
+
         series: [{
             name: 'Oximetria',
             data: (function () {
