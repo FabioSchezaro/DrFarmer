@@ -1,5 +1,5 @@
-function graphOximetria () {
-    Highcharts.stockChart(document.getElementById('container2'), {
+function graphCardio () {
+    Highcharts.stockChart(document.getElementById('container'), {
         chart: {
             events: {
                 load: function () {
@@ -12,22 +12,17 @@ function graphOximetria () {
                     
                     setInterval(function () {
                         var x = (new Date()).getTime();// current time
-                        var div = document.getElementById('pulsoOximetria');
-                        // var eixoY = parseFloat(document.getElementById('pulsoOximetria').value);
-                        // y = eixoY;
+                        var eixoY = parseFloat(document.getElementById('pulsoCardio').value);
 
-                        if (i <= 5) {
-                            y = 0;
-                        } else {
-                            // y = eixoY;
-                            y = Math.random() * 100;
-                            i = 0;
-                        }
+                        y = eixoY;
+                        // if (i <= 5) {
+                        //     y = 0;
+                        // } else {
+                        //     y = eixoY;
+                        //     // y = Math.random() * 100;
+                        //     i = 0;
+                        // }
                         s.addPoint([x, y], true, false);
-                        if (y != 0) {
-                            y = parseInt(y);
-                            divPulsoCardio.innerText = y;
-                        }
                         i ++;
                     }, 1000);
                 }
@@ -36,8 +31,7 @@ function graphOximetria () {
         },
 
         // navigator: {
-        //     // enabled: false,
-        //     range: 10
+        //     enabled: false
         // },
 
         scrollbar: {
@@ -58,15 +52,11 @@ function graphOximetria () {
                 text: ''
             }],
             inputEnabled: false,
-            enabled: false,
             selected: 0
         },
 
         title: {
-            text: 'Oximetria',
-            style: {
-                color: '#FF0000'
-            }
+            text: 'Cardio'
         },
 
         exporting: {
@@ -75,17 +65,11 @@ function graphOximetria () {
 
         yAxis: [{
             gridLineWidth: 0,
-            minorGridLineWidth: 0
+            minorGridLineWidth: 0,
         }],
 
-        plotOptions: {
-            series: {
-                color: '#FF0000'
-            }
-        },
-
         series: [{
-            name: 'Oximetria',
+            name: 'Cardio',
             data: (function () {
                 // generate an array of random data
                 var data = [],

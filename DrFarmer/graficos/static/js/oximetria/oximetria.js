@@ -1,32 +1,28 @@
-function graphCardio () {
-    Highcharts.stockChart(document.getElementById('container'), {
+function graphOximetria () {
+    Highcharts.stockChart(document.getElementById('container2'), {
         chart: {
             events: {
                 load: function () {
                     // set up the updating of the chart each second
                     var s = this.series[0];
                     var i = 0;
-                    var qtdBatimentos = 0;
                     // var bps = document.getElementById('bps').value;
                     
                     // var x = document.getElementById('eixoX').value;
                     
                     setInterval(function () {
-                        var x = (new Date()).getSeconds();// current time
-                        var divPulsoCardio = document.getElementById('pulsoCardio');
-                        // var eixoY = parseFloat(document.getElementById('pulsoCardio').value);
-                        // y = eixoY;
+                        var x = (new Date()).getTime();// current time
+                        var eixoY = parseFloat(document.getElementById('pulsoOximetria').value);
 
-                        if (i <= 5) {
-                            y = 0;
-                        } else {
-                            y = Math.random() * 100;
-                            i = 0;
-                        }
+                        y = eixoY;
+                        // if (i <= 5) {
+                        //     y = 0;
+                        // } else {
+                        //     y = eixoY;
+                        //     // y = Math.random() * 100;
+                        //     i = 0;
+                        // }
                         s.addPoint([x, y], true, false);
-                        var bpm = 60 / 5;
-                        divPulsoCardio.innerText = bpm;
-                        
                         i ++;
                     }, 1000);
                 }
@@ -35,7 +31,8 @@ function graphCardio () {
         },
 
         // navigator: {
-        //     enabled: false
+        //     // enabled: false,
+        //     range: 10
         // },
 
         scrollbar: {
@@ -44,7 +41,7 @@ function graphCardio () {
 
         rangeSelector: {
             buttons: [{
-                count: 1,
+                count: 10,
                 type: 'second',
                 text: ''
             }, {
@@ -56,11 +53,15 @@ function graphCardio () {
                 text: ''
             }],
             inputEnabled: false,
+            enabled: false,
             selected: 0
         },
 
         title: {
-            text: 'Cardio'
+            text: 'Oximetria',
+            style: {
+                color: '#FF0000'
+            }
         },
 
         exporting: {
@@ -69,11 +70,17 @@ function graphCardio () {
 
         yAxis: [{
             gridLineWidth: 0,
-            minorGridLineWidth: 0,
+            minorGridLineWidth: 0
         }],
 
+        plotOptions: {
+            series: {
+                color: '#FF0000'
+            }
+        },
+
         series: [{
-            name: 'Cardio',
+            name: 'Oximetria',
             data: (function () {
                 // generate an array of random data
                 var data = [],
